@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MainComponent } from './main/main.component';
 import { AsideTagsComponent } from './aside-tags/aside-tags.component';
 import { FooterComponent } from './footer/footer.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     NavigationComponent,
     MainComponent,
     AsideTagsComponent,
-    FooterComponent
+    FooterComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
