@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LogoComponent } from './logo/logo.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
     FooterComponent,
     LogoComponent,
     DatenschutzComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
