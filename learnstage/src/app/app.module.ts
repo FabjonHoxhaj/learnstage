@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainComponent } from './main/main.component';
 import { AsideTagsComponent } from './aside-tags/aside-tags.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     MainComponent,
-    AsideTagsComponent
+    AsideTagsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
