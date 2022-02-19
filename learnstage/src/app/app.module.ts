@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
 import { HashtagComponent } from './hashtag/hashtag.component';
+import { HashtagButtonComponent } from './hashtag-button/hashtag-button.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HashtagComponent } from './hashtag/hashtag.component';
     ImpressumComponent,
     HomeComponent,
     ContactFormComponent,
-    HashtagComponent
+    HashtagComponent,
+    HashtagButtonComponent
   ],
   imports: [
     BrowserModule,
