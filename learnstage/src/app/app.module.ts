@@ -13,6 +13,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { HomeComponent } from './home/home.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
+import { HashtagComponent } from './hashtag/hashtag.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     DatenschutzComponent,
     ImpressumComponent,
     HomeComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    HashtagComponent
   ],
   imports: [
     BrowserModule,
