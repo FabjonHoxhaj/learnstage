@@ -9,6 +9,7 @@ import { AsideTagsComponent } from './aside-tags/aside-tags.component';
 import { FooterComponent } from './footer/footer.component';
 import { LogoComponent } from './logo/logo.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatenschutzComponent } from './datenschutz/datenschutz.component';
     AsideTagsComponent,
     FooterComponent,
     LogoComponent,
-    DatenschutzComponent
+    DatenschutzComponent,
+    ImpressumComponent
   ],
   imports: [
     BrowserModule,
