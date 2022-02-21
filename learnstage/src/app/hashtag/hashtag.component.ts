@@ -37,4 +37,11 @@ export class HashtagComponent implements OnInit {
     this.closeButton();
   }
 
+  onGetData() {
+    this.http.getData()
+      .subscribe(
+        data => this.arraySet.add(data)
+      );
+  }
+
 }
