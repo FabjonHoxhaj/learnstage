@@ -11,5 +11,9 @@ export class HttpService {
         const headers = new HttpHeaders({ "Content-Type": "application/json" }); //hiermit weiß die DB welche Art von Daten ich schicke
         return this.http.post("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/data.json", body, { headers: headers });
     }
+
+    getData() {
+        this.http.get("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/data.json");
+    }
 }
 
