@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -15,6 +14,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
 import { HashtagComponent } from './hashtag/hashtag.component';
 import { HashtagButtonComponent } from './hashtag-button/hashtag-button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,9 @@ import { HashtagButtonComponent } from './hashtag-button/hashtag-button.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

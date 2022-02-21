@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-hashtag',
   templateUrl: './hashtag.component.html',
-  styleUrls: ['./hashtag.component.css']
+  styleUrls: ['./hashtag.component.css'],
+  providers: [HttpService]
 })
 export class HashtagComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpService) { }
 
   ngOnInit(): void {
   }
@@ -28,9 +30,9 @@ export class HashtagComponent implements OnInit {
     let input = (<HTMLInputElement>document.getElementById("inputValue")).value;
     this.arraySet.add(input);
 
-    /*this.httpService.sendData(input).subscribe(
+    this.http.sendData(input).subscribe(
       data => console.log(data),
-      error => console.error(error));*/
+      error => console.error(error));
 
     this.closeButton();
   }
