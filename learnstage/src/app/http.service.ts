@@ -1,7 +1,7 @@
-import { HttpClient, HttpHeaders, Response } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import "rxjs/Rx";
-
+import { map } from 'rxjs/operators';
+//import { Response } from "@angular/common/http";
 
 @Injectable()
 export class HttpService {
@@ -14,15 +14,18 @@ export class HttpService {
     }
 
     getData() {
-        return this.http.get("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/data.json")
-            .map((response: Response) => {
-                const data = response.json();
-                const returnArray = [];
-                for (let key in data) {
-                    returnArray.push(data[key]);
-                }
-                return returnArray;
-            });
+        return this.http.get("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/data.json").pipe()
+
+
+
+        /*map((response: Response) => {
+            const data = response.json();
+            const returnArray = [];
+            for (let key in data) {
+                returnArray.push(data[key]);
+            }
+            return returnArray;
+        }));*/
     }
 }
 
