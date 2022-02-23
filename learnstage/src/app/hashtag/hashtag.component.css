@@ -28,6 +28,8 @@ button {
     font-size: 15px;
     padding: 10px;
     cursor: pointer;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .body-overlay {  /*Hiermit bekommen wir ein halbtransperantes Overlay, welches sich über die gesmte Seite erstreckt*/
