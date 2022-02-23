@@ -19,18 +19,5 @@ export class HttpService {
         return DBEntries;
     }
 
-
-
-
-
-    /*map((response: Response) => {
-        const data = response.json();
-        const returnArray = [];
-        for (let key in data) {
-            returnArray.push(data[key]);
-        }
-        return returnArray;
-    }));*/
-
 }
 

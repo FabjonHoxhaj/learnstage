@@ -39,8 +39,11 @@ export class HashtagComponent implements OnInit {
 
   onGetData() {
     this.http.getData().subscribe(
-      (data: any) => this.arraySet.add(Object.values(data))
-    )
+      (data: any) => {
+        for (let i of Object.values(data))
+          this.arraySet.add(i)
+      });
+
   }
 
   /*onGetData() {
