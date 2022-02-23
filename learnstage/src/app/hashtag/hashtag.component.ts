@@ -46,14 +46,4 @@ export class HashtagComponent implements OnInit {
 
   }
 
-  /*onGetData() {
-    console.log("test");
-    this.http.getData().subscribe(
-      data => this.arraySet.add(data) oder console.log(data)
-    );
-
-    for (let i of Object.values(DBEntries)) {
-            return i;
-  }*/
-
 }
