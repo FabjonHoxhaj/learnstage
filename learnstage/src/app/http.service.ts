@@ -1,8 +1,5 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { TestBed } from "@angular/core/testing";
-import { map } from 'rxjs/operators';
-//import { Response } from "@angular/common/http";
 
 @Injectable()
 export class HttpService {
