@@ -16,6 +16,7 @@ import { HashtagComponent } from './hashtag/hashtag.component';
 import { HashtagButtonComponent } from './hashtag-button/hashtag-button.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HashtagMaterialsComponent } from './hashtag-materials/hashtag-materials.component';
+import { UploadFormComponent } from './components/upload-form/upload-form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HashtagMaterialsComponent } from './hashtag-materials/hashtag-materials
     ContactFormComponent,
     HashtagComponent,
     HashtagButtonComponent,
-    HashtagMaterialsComponent
+    HashtagMaterialsComponent,
+    UploadFormComponent
   ],
   imports: [
     BrowserModule,
