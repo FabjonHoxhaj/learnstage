@@ -1,21 +1,27 @@
-
-
-
-input {
-  background-color: #e4d5c5;
-}
-
-.upload {
+div {
     background-color: #e4d5c5;
-    border: none;
+    display: inline-flex;
     border-radius: 5px;
-    color: #002b44;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 30px;
     padding-left: 30px;
+    margin-right: 10px;
+}
+label {
+    color: #002b44;
     cursor: pointer;
     font-weight: bold;
+}
+
+.upload {
+    background-color: #e4d5c5;
+    border-radius: 5px;
+    border: none;
+    color: #002b44;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
 }

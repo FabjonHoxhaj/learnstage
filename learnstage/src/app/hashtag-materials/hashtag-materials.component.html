@@ -3,9 +3,11 @@
 </head>
 
 <body>
-    <label>
-        <input type="file" class="text-nowrap text-truncate" (change)="selectFile($event)" />
-    </label>
+    <div>
+        <label>
+            <input type="file" (change)="selectFile($event)" hidden /> <i class="material-icons">add</i>
+        </label>
+    </div>
 
     <button class="upload" [disabled]="!selectedFiles" (click)="upload()">
         <i class="material-icons">file_upload</i>
