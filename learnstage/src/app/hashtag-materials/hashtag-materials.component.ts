@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadService } from '../upload.service';
 import { FileUpload } from 'src/app/models/file-upload.model';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-hashtag-materials',
@@ -11,10 +12,19 @@ export class HashtagMaterialsComponent implements OnInit {
 
   selectedFiles?: FileList;
   currentFileUpload?: FileUpload;
+  fileUploads?: any[];
 
   constructor(private uploadService: FileUploadService) { }
 
   ngOnInit(): void {
+    this.uploadService.getFiles(6).snapshotChanges().pipe(
+      map(changes =>
+        // store the key
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    ).subscribe(fileUploads => {
+      this.fileUploads = fileUploads;
+    });
   }
 
   selectFile(event: any): void {
@@ -31,5 +41,6 @@ export class HashtagMaterialsComponent implements OnInit {
       }
     }
   }
+
 
 }
