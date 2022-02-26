@@ -26,13 +26,16 @@ export class FileUploadService {
         ).subscribe();
         return uploadTask.percentageChanges();
     }
+
     private saveFileData(fileUpload: FileUpload): void {
         this.db.list(this.basePath).push(fileUpload);
     }
+
     getFiles(numberItems: number): AngularFireList<FileUpload> {
         return this.db.list(this.basePath, ref =>
             ref.limitToLast(numberItems));
     }
+
     deleteFile(fileUpload: FileUpload): void {
         this.deleteFileDatabase(fileUpload.key)
             .then(() => {
@@ -40,9 +43,11 @@ export class FileUploadService {
             })
             .catch(error => console.log(error));
     }
+
     private deleteFileDatabase(key: string): Promise<void> {
         return this.db.list(this.basePath).remove(key);
     }
+
     private deleteFileStorage(name: string): void {
         const storageRef = this.storage.ref(this.basePath);
         storageRef.child(name).delete();
