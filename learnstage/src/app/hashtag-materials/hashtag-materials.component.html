@@ -1,1 +1,6 @@
-<p>hashtag-materials works!</p>
+<label>
+    <input type="file" class="text-nowrap text-truncate" (change)="selectFile($event)" />
+</label>
+<button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">
+    Upload
+</button>
