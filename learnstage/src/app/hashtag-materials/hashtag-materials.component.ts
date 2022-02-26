@@ -17,14 +17,6 @@ export class HashtagMaterialsComponent implements OnInit {
   constructor(private uploadService: FileUploadService) { }
 
   ngOnInit(): void {
-    this.uploadService.getFiles(6).snapshotChanges().pipe(
-      map(changes =>
-        // store the key
-        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
-      )
-    ).subscribe(fileUploads => {
-      this.fileUploads = fileUploads;
-    });
   }
 
   selectFile(event: any): void {
@@ -40,6 +32,18 @@ export class HashtagMaterialsComponent implements OnInit {
         this.uploadService.pushFileToStorage(this.currentFileUpload)
       }
     }
+  }
+
+  getFile() {
+    const filee = this.uploadService.getFiles(13).snapshotChanges().pipe(
+      map(changes =>
+        // store the key
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    ).subscribe(fileUploads => {
+      this.fileUploads = fileUploads;
+    });
+    console.log(filee);
   }
 
 
