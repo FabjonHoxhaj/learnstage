@@ -1,6 +1,13 @@
-<label>
-    <input type="file" class="text-nowrap text-truncate" (change)="selectFile($event)" />
-</label>
-<button [disabled]="!selectedFiles" (click)="upload()">
-    Upload
-</button>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <label>
+        <input type="file" class="text-nowrap text-truncate" (change)="selectFile($event)" />
+    </label>
+
+    <button class="upload" [disabled]="!selectedFiles" (click)="upload()">
+        <i class="material-icons">file_upload</i>
+    </button>
+</body>
