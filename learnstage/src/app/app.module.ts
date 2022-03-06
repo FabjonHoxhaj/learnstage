@@ -16,6 +16,10 @@ import { HashtagComponent } from './hashtag/hashtag.component';
 import { HashtagButtonComponent } from './hashtag-button/hashtag-button.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HashtagMaterialsComponent } from './hashtag-materials/hashtag-materials.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,10 @@ import { HashtagMaterialsComponent } from './hashtag-materials/hashtag-materials
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireStorageModule
 
   ],
   providers: [],
