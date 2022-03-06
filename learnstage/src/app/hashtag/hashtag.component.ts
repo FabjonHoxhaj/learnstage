@@ -12,10 +12,16 @@ export class HashtagComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
+    this.http.getData().subscribe(
+      (data: any) => {
+        for (let i of Object.values(data))
+          this.arraySet.add(i)
+      });
   }
 
   arraySet = new Set();
   isHidden: boolean = false;
+  showHashtags: boolean = false;
 
 
   closeButton() {
@@ -35,15 +41,6 @@ export class HashtagComponent implements OnInit {
       error => console.error(error));
 
     this.closeButton();
-  }
-
-  onGetData() {
-    this.http.getData().subscribe(
-      (data: any) => {
-        for (let i of Object.values(data))
-          this.arraySet.add(i)
-      });
-
   }
 
 }
