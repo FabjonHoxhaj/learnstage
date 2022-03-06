@@ -30,3 +30,24 @@ label {
     padding-right: 30px;
     padding-left: 30px;
 }
+
+.containerUploads {
+    display: flex;
+    border-bottom: 1.8px solid #808080;
+    margin-top: 3px;
+}
+
+.line {
+    border-top: 1.8px solid #808080;
+}
+
+.fileIcon {
+    color: #002b44;
+    margin-right: 5px;
+}
+
+.fileName {
+    margin-top: 3px;
+}
+
+
