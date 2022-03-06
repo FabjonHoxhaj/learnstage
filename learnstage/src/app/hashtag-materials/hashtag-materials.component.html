@@ -19,8 +19,11 @@
 
     <button (click)="getFile()">List of Files</button>
     <div class="card" *ngFor="let file of fileUploads">
-        <li>
+        <iframe>
             {{file.name}}
-        </li>
+        </iframe>
     </div>
 </body>
+
+<iframe src="https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/data.json" frameBorder="0"
+    scrolling="auto" height="100%" width="100%"></iframe>
