@@ -1,4 +1,9 @@
-div {
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.containerInput {
     background-color: #e4d5c5;
     display: inline-flex;
     border-radius: 5px;

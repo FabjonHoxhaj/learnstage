@@ -35,7 +35,7 @@ export class HashtagMaterialsComponent implements OnInit {
   }
 
   getFile() {
-    const filee = this.uploadService.getFiles(13).snapshotChanges().pipe(
+    const file = this.uploadService.getFiles(100).snapshotChanges().pipe(
       map(changes =>
         // store the key
         changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
@@ -43,7 +43,7 @@ export class HashtagMaterialsComponent implements OnInit {
     ).subscribe(fileUploads => {
       this.fileUploads = fileUploads;
     });
-    console.log(filee);
+    console.log(file);
   }
 
 
