@@ -20,6 +20,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
+import { StarDirective } from './star.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { environment } from 'src/environments/environment';
     ContactFormComponent,
     HashtagComponent,
     HashtagButtonComponent,
-    HashtagMaterialsComponent
+    HashtagMaterialsComponent,
+    StarDirective
   ],
   imports: [
     BrowserModule,
