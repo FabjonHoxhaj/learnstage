@@ -22,7 +22,7 @@
         <div class="fileName">
             <div>{{file.name}}</div>
             <div>
-              <app-star-rating></app-star-rating>
+              <app-star-rating (starColorEvent)="fillStarColor($event)"></app-star-rating>
               </div>
         </div>
     </div>
