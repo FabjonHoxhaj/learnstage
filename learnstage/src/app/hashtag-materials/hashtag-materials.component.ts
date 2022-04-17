@@ -42,8 +42,8 @@ export class HashtagMaterialsComponent implements OnInit {
     }
   }
 
-  fillStarColor(name: String) {
-    alert(name);
+  fillStarColor(color: any) {
+    alert(color);
   }
 
 

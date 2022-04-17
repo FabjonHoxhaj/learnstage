@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class StarRatingComponent implements OnInit {
 
   @Output() starColorEvent = new EventEmitter();
-  name = "Test";
+  color = "orange";
   
 
   constructor() { }
@@ -17,7 +17,7 @@ export class StarRatingComponent implements OnInit {
   }
 
   parentMethod() {
-      this.starColorEvent.emit(this.name);
+      this.starColorEvent.emit(this.color);
   }
 
 }
