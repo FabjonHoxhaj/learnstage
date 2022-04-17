@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { FileUploadService } from '../upload.service';
 import { FileUpload } from 'src/app/models/file-upload.model';
 import { map } from 'rxjs/operators';
@@ -13,6 +13,7 @@ export class HashtagMaterialsComponent implements OnInit {
   selectedFiles?: FileList;
   currentFileUpload?: FileUpload;
   fileUploads?: any[];
+  defaultColor: any;
 
   constructor(private uploadService: FileUploadService) { }
 
