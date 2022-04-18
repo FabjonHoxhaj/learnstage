@@ -6,18 +6,38 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./star-rating.component.css']
 })
 export class StarRatingComponent implements OnInit {
+  starClassName = "star-rating-blank";
 
-  @Output() starColorEvent = new EventEmitter();
-  color = "orange";
-  
+  @Input() starId: any;
+  @Input() rating: any;
+
+  @Output() leave: EventEmitter<number> = new EventEmitter();
+  @Output() enter: EventEmitter<number> = new EventEmitter();
+  @Output() bigClick: EventEmitter<number> = new EventEmitter();
+ 
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log(this.starId);
+    console.log(this.rating);
+
+    if (this.rating >= this.starId) {
+      this.starClassName = "star-rating-filled";
+    }
+
   }
 
-  parentMethod() {
-      this.starColorEvent.emit(this.color);
+  onenter() {
+    this.enter.emit(this.starId);
+  }
+
+  onleave() {
+    this.leave.emit(this.starId);
+  }
+
+  starClicked() {
+    this.bigClick.emit(this.starId);
   }
 
 }
