@@ -85,6 +85,7 @@ export class HashtagMaterialsComponent implements OnInit {
   this.defaultColor1.color = "orange";
   this.defaultColor2.color = "orange";
   this.defaultColor3.color = "orange";
+  
 }
 
 fillStarColor4() {
