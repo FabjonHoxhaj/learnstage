@@ -111,7 +111,7 @@ enter(i: any) {
   this.hoverState = i;
 }
 
-leave() {
+leave(i: any) {
   this.hoverState = 0;
 }
 

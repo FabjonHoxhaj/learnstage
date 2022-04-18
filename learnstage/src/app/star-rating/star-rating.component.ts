@@ -11,9 +11,9 @@ export class StarRatingComponent implements OnInit {
   @Input() starId: any;
   @Input() rating: any;
 
-  @Output() leave: EventEmitter<number> = new EventEmitter();
-  @Output() enter: EventEmitter<number> = new EventEmitter();
-  @Output() bigClick: EventEmitter<number> = new EventEmitter();
+  @Output() leave: EventEmitter<any> = new EventEmitter();
+  @Output() enter: EventEmitter<any> = new EventEmitter();
+  @Output() bigClick: EventEmitter<any> = new EventEmitter();
  
 
   constructor() { }
