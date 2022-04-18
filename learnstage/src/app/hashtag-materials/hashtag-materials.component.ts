@@ -15,30 +15,6 @@ export class HashtagMaterialsComponent implements OnInit {
   currentFileUpload?: FileUpload;
   fileUploads?: any[];
 
-  public defaultColor1 = {
-    "color" :  "#D3D3D3"
-  }
-
-  public defaultColor2 = {
-    "color" :  "#D3D3D3"
-  }
-
-  public defaultColor3 = {
-    "color" :  "#D3D3D3"
-  }
-
-  public defaultColor4 = {
-    "color" :  "#D3D3D3"
-  }
-
-  public defaultColor5 = {
-    "color" :  "#D3D3D3"
-  }
-
-  public starColor = {
-    "color" : "orange"
-  }
-
   stars = [1,2,3,4,5];
   rating = 0;
   hoverState = 0;
@@ -72,40 +48,6 @@ export class HashtagMaterialsComponent implements OnInit {
     }
   }
 
-  /*fillStarColor(color: any) {
-    alert(color);
-  }*/
-
-  fillStarColor1() {
-     this.defaultColor1.color = "orange";
-  }
-
-  fillStarColor2() {
-    this.defaultColor1.color = "orange";
-    this.defaultColor2.color = "orange";
- }
-
- fillStarColor3() {
-  this.defaultColor1.color = "orange";
-  this.defaultColor2.color = "orange";
-  this.defaultColor3.color = "orange";
-  
-}
-
-fillStarColor4() {
-  this.defaultColor1.color = "orange";
-  this.defaultColor2.color = "orange";
-  this.defaultColor3.color = "orange";
-  this.defaultColor4.color = "orange";
-}
-
-fillStarColor5() {
-  this.defaultColor1.color = "orange";
-  this.defaultColor2.color = "orange";
-  this.defaultColor3.color = "orange";
-  this.defaultColor4.color = "orange";
-  this.defaultColor5.color = "orange";
-}
 
 enter(i: any) {
   this.hoverState = i;
