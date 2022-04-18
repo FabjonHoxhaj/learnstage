@@ -2,6 +2,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { FileUploadService } from '../upload.service';
 import { FileUpload } from 'src/app/models/file-upload.model';
 import { map } from 'rxjs/operators';
+import { asLiteral } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-hashtag-materials',
@@ -13,7 +14,31 @@ export class HashtagMaterialsComponent implements OnInit {
   selectedFiles?: FileList;
   currentFileUpload?: FileUpload;
   fileUploads?: any[];
-  defaultColor: any;
+
+  public defaultColor1 = {
+    "color" :  "#D3D3D3"
+  }
+
+  public defaultColor2 = {
+    "color" :  "#D3D3D3"
+  }
+
+  public defaultColor3 = {
+    "color" :  "#D3D3D3"
+  }
+
+  public defaultColor4 = {
+    "color" :  "#D3D3D3"
+  }
+
+  public defaultColor5 = {
+    "color" :  "#D3D3D3"
+  }
+
+  public starColor = {
+    "color" : "orange"
+  }
+
 
   constructor(private uploadService: FileUploadService) { }
 
@@ -43,9 +68,39 @@ export class HashtagMaterialsComponent implements OnInit {
     }
   }
 
-  fillStarColor(color: any) {
+  /*fillStarColor(color: any) {
     alert(color);
+  }*/
+
+  fillStarColor1() {
+     this.defaultColor1.color = "orange";
   }
+
+  fillStarColor2() {
+    this.defaultColor1.color = "orange";
+    this.defaultColor2.color = "orange";
+ }
+
+ fillStarColor3() {
+  this.defaultColor1.color = "orange";
+  this.defaultColor2.color = "orange";
+  this.defaultColor3.color = "orange";
+}
+
+fillStarColor4() {
+  this.defaultColor1.color = "orange";
+  this.defaultColor2.color = "orange";
+  this.defaultColor3.color = "orange";
+  this.defaultColor4.color = "orange";
+}
+
+fillStarColor5() {
+  this.defaultColor1.color = "orange";
+  this.defaultColor2.color = "orange";
+  this.defaultColor3.color = "orange";
+  this.defaultColor4.color = "orange";
+  this.defaultColor5.color = "orange";
+}
 
 
 }

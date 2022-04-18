@@ -7,7 +7,6 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class StarRatingComponent implements OnInit {
 
-  @Input() defaultColor: any;
   @Output() starColorEvent = new EventEmitter();
   color = "orange";
   
