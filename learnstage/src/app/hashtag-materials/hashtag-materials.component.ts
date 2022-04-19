@@ -15,8 +15,8 @@ export class HashtagMaterialsComponent implements OnInit {
   currentFileUpload?: FileUpload;
   fileUploads?: any[];
 
-  stars = [1,2,3,4,5];
-  rating = 0;
+  stars = [1, 2, 3,4, 5];
+  rating = 1;
   hoverState = 0;
 
 
@@ -49,12 +49,16 @@ export class HashtagMaterialsComponent implements OnInit {
   }
 
 
-enter(i: any) {
-  this.hoverState = i;
+onStarEnter(starId: any) {
+  this.hoverState = starId;
 }
 
-leave(i: any) {
+onStarLeave() {
   this.hoverState = 0;
+}
+
+onStarClicked(starId: any) {
+  this.rating =starId;
 }
 
 updateRating(i: any) {
