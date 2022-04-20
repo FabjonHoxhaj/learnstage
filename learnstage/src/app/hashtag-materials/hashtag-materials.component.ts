@@ -65,5 +65,4 @@ updateRating(i: any) {
   this.rating = i;
 }
 
-
 }
