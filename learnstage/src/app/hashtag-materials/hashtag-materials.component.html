@@ -23,20 +23,12 @@
             <div>{{file.name}}</div>
             <div>
               <ng-container *ngFor="let star of stars;">
-                <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"  
-                (bigClick)="updateRating(stars)">
-              </app-star-rating>
+                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                    (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"  
+                    (bigClick)="updateRating(stars)">
+                    </app-star-rating>
               </ng-container>
-                <!--<span [ngStyle] = "defaultColor1" (click)= "fillStarColor1()" class="material-icons">star_rate</span>
-                <span [ngStyle] = "defaultColor2" (click)= "fillStarColor2()" class="material-icons">star_rate</span>
-                <span [ngStyle] = "defaultColor3" (click)= "fillStarColor3()" class="material-icons">star_rate</span>
-                <span [ngStyle] = "defaultColor4" (click)= "fillStarColor4()"class="material-icons">star_rate</span>
-                <span [ngStyle] = "defaultColor5" (click)= "fillStarColor5()" class="material-icons">star_rate</span>-->
               </div>
         </div>
     </div>
-
-    <!--<app-star-rating [ngStyle] = "defaultColor" (starColorEvent)="fillStarColor($event)"></app-star-rating>-->
-
-
 </body>
