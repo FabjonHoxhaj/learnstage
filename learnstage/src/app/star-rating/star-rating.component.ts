@@ -6,7 +6,6 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
   styleUrls: ['./star-rating.component.css']
 })
 export class StarRatingComponent implements OnInit {
-  starClassName = "star-rating-blank";
 
   @Input() starId: any;
   @Input() rating: any;
@@ -21,11 +20,6 @@ export class StarRatingComponent implements OnInit {
   ngOnInit() {
     console.log(this.starId);
     console.log(this.rating);
-
-    if (this.rating >= this.starId) {
-      this.starClassName = "star-rating-filled";
-    }
-
   }
 
   onStarEnter() {
