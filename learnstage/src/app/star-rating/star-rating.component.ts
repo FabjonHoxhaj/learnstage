@@ -17,20 +17,17 @@ export class StarRatingComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.starId);
-    console.log(this.rating);
-  }
+  ngOnInit() {}
 
-  onStarEnter() {
+  StarEnter() {
     this.starEnter.emit(this.starId);
   }
 
-  onStarLeave() {
+  StarLeave() {
     this.starLeave.emit();
   }
 
-  onStarClicked() {
+  StarClicked() {
     this.starClicked.emit(this.starId);
   }
 

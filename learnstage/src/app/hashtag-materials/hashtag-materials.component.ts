@@ -2,7 +2,6 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { FileUploadService } from '../upload.service';
 import { FileUpload } from 'src/app/models/file-upload.model';
 import { map } from 'rxjs/operators';
-import { asLiteral } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-hashtag-materials',
@@ -51,18 +50,17 @@ export class HashtagMaterialsComponent implements OnInit {
 
 onStarEnter(starId: any) {
   this.hoverState = starId;
+  console.log(this. hoverState);
 }
 
 onStarLeave() {
   this.hoverState = 0;
+  console.log(this.hoverState);
 }
 
 onStarClicked(starId: any) {
   this.rating =starId;
-}
-
-updateRating(i: any) {
-  this.rating = i;
+  console.log(this.rating);
 }
 
 }

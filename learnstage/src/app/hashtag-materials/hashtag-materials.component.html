@@ -24,8 +24,7 @@
             <div>
               <ng-container *ngFor="let star of stars;">
                     <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                    (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating"  
-                    (bigClick)="updateRating(stars)">
+                    (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating">
                     </app-star-rating>
               </ng-container>
               </div>
