@@ -21,6 +21,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import { StarDirective } from './star.directive';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { StarDirective } from './star.directive';
     HashtagComponent,
     HashtagButtonComponent,
     HashtagMaterialsComponent,
-    StarDirective
+    StarDirective,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { FileUploadService } from '../upload.service';
 import { FileUpload } from 'src/app/models/file-upload.model';
 import { map } from 'rxjs/operators';
@@ -13,6 +13,11 @@ export class HashtagMaterialsComponent implements OnInit {
   selectedFiles?: FileList;
   currentFileUpload?: FileUpload;
   fileUploads?: any[];
+
+  stars = [1, 2, 3, 4, 5];
+  rating = 0;
+  hoverState = 0;
+
 
   constructor(private uploadService: FileUploadService) { }
 
@@ -42,5 +47,20 @@ export class HashtagMaterialsComponent implements OnInit {
     }
   }
 
+
+onStarEnter(starId: any) {
+  this.hoverState = starId;
+  console.log(this. hoverState);
+}
+
+onStarLeave() {
+  this.hoverState = 0;
+  console.log(this.hoverState);
+}
+
+onStarClicked(starId: any) {
+  this.rating =starId;
+  console.log(this.rating);
+}
 
 }

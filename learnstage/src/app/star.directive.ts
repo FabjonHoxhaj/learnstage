@@ -18,10 +18,10 @@ export class StarDirective {
     this.color = this.normalColor
   }
 
-  @HostListener("click") onClick() {
+ /*@HostListener("click") onClick() {
     this.normalColor = "orange";  
     this.color = this.normalColor;
-  }
+  }*/
 
   constructor() { }
 
