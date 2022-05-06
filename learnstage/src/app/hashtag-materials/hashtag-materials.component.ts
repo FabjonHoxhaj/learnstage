@@ -14,10 +14,13 @@ export class HashtagMaterialsComponent implements OnInit {
   currentFileUpload?: FileUpload;
   fileUploads?: any[];
 
-  stars = [1, 2, 3, 4, 5];
+  starOne = 1;
+  starTwo = 2;
+  starThree = 3;
+  starFour = 4;
+  starFive = 5;
   rating = 0;
   hoverState = 0;
-  activeStar: boolean = true;
 
 
   constructor(private uploadService: FileUploadService) { }
@@ -60,6 +63,11 @@ onStarLeave() {
 onStarClicked(starId: any) {
   this.rating =starId;
   console.log(this.rating);
+}
+
+getIndex() {
+  let index = document.getElementsByTagName("span");
+  console.log(index);
 }
 
 }

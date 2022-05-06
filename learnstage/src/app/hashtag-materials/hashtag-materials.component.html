@@ -23,21 +23,22 @@
             <div>{{file.name}}</div>
             <div>
               <ng-container>
-                  <span *ngIf="activeStar==true">
+                  <span>
                     <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                       (starClicked)="onStarClicked($event)" [starId]="starOne" [rating]="hoverState || rating">
+                    </app-star-rating>
+                 
+                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                       (starClicked)="onStarClicked($event)" [starId]="starTwo" [rating]="hoverState || rating">
                     </app-star-rating>
                     <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                       (starClicked)="onStarClicked($event)" [starId]="starThree" [rating]="hoverState || rating">
                     </app-star-rating>
                     <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                       (starClicked)="onStarClicked($event)" [starId]="starFour" [rating]="hoverState || rating">
                     </app-star-rating>
                     <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
-                    </app-star-rating>
-                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                       (starClicked)="onStarClicked($event)" [starId]="starFive" [rating]="rating" [rating]="hoverState || rating">
                     </app-star-rating>
                 </span>
               </ng-container>
