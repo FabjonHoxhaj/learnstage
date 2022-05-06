@@ -22,10 +22,24 @@
         <div class="fileName">
             <div>{{file.name}}</div>
             <div>
-              <ng-container *ngFor="let star of stars;">
+              <ng-container>
+                  <span *ngIf="activeStar==true">
                     <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                    (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating">
+                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
                     </app-star-rating>
+                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                    </app-star-rating>
+                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                    </app-star-rating>
+                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                    </app-star-rating>
+                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                       (starClicked)="onStarClicked($event)" [rating]="hoverState || rating">
+                    </app-star-rating>
+                </span>
               </ng-container>
               </div>
         </div>
