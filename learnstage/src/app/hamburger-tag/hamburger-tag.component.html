@@ -1,9 +1,14 @@
 
 <div (click)="showMenu()" class="container">
-	<div class="hamburger" id="hamburger-1">
+	<div class="hamburger" id="hamburger-1" *ngIf="isHidden==true">
 		<span class="line"></span>
 		<span class="line"></span>
 		<span class="line"></span>
 	 </div>
+</div>
+
+<div class="dropdown-content">
+   <a href="#home">Tag setzen</a>
+   <a href="#contact">Datei herunterladen</a>
 </div>
 	
