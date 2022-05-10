@@ -7,16 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HamburgerTagComponent implements OnInit {
 
-  isHidden: boolean = true;
+  menuHidden: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showMenu() {
-      
+  closeMenu() {
+    this.menuHidden = true;
   }
 
+  showMenu() {
+      this.menuHidden=false;
+  }
 
 }

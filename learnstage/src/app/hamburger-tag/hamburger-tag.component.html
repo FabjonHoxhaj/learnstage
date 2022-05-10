@@ -1,14 +1,18 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
 <div (click)="showMenu()" class="container">
-	<div class="hamburger" id="hamburger-1" *ngIf="isHidden==true">
+	<div class="hamburger" id="hamburger-1">
 		<span class="line"></span>
 		<span class="line"></span>
 		<span class="line"></span>
 	 </div>
 </div>
-
-<div class="dropdown-content">
+<div class="dropdown-content" *ngIf="menuHidden==false">
    <a href="#home">Tag setzen</a>
    <a href="#contact">Datei herunterladen</a>
 </div>
+
+<i class="material-icons">close</i>
 	
