@@ -8,18 +8,30 @@ import { Component, OnInit } from '@angular/core';
 export class HamburgerTagComponent implements OnInit {
 
   menuHidden: boolean = true;
+  hamburgerHide: boolean = true;
+  closeHidden: boolean = false;
+  zaehler: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  closeMenu() {
-    this.menuHidden = true;
-  }
-
   showMenu() {
-      this.menuHidden=false;
+    if(this.zaehler==0) {
+      this.menuHidden = false;
+      this.hamburgerHide = false;
+      this.closeHidden = true;
+      this.zaehler++;
+      return;
+    }
+    if(this.zaehler==1) {
+      this.menuHidden = true;
+      this.hamburgerHide = true;
+      this.closeHidden = false;
+      this.zaehler--;
+      return;
+    }  
   }
 
 }

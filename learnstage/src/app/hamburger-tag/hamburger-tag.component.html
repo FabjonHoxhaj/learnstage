@@ -3,12 +3,14 @@
 </head>
 
 <div (click)="showMenu()" class="container">
-	<div class="hamburger" id="hamburger-1">
+	<div *ngIf="hamburgerHide==true" class="hamburger" id="hamburger-1">
 		<span class="line"></span>
 		<span class="line"></span>
 		<span class="line"></span>
-		<i class="material-icons">close</i>
-	 </div>
+	</div>
+	<div *ngIf="closeHidden==true">
+     <span class="material-icons">close</span>
+	</div>
 </div>
 <div class="dropdown-content" *ngIf="menuHidden==false">
    <a href="#home">Tag setzen</a>
