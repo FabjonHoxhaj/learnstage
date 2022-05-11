@@ -21,6 +21,7 @@ export class HashtagMaterialsComponent implements OnInit {
   starFive = 5;
   rating = 0;
   hoverState = 0;
+  buttonHide: boolean = true;
 
 
   constructor(private uploadService: FileUploadService) { }

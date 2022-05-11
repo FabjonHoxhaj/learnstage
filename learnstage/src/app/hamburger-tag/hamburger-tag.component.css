@@ -34,6 +34,7 @@
 	text-decoration: none;
 	display: block;
 	margin: 10px;
+	cursor: pointer;
   }
 
   .dropdown-content {
