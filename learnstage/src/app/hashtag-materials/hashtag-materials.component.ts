@@ -21,7 +21,7 @@ export class HashtagMaterialsComponent implements OnInit {
   starFive = 5;
   rating = 0;
   hoverState = 0;
-  buttonHide: boolean = true;
+  buttonHide: boolean = false;
 
 
   constructor(private uploadService: FileUploadService) { }
@@ -69,6 +69,10 @@ onStarClicked(starId: any) {
 getIndex() {
   let index = document.getElementsByTagName("span");
   console.log(index);
+}
+
+onTagging(buttonHide: boolean) {
+this.buttonHide = buttonHide;
 }
 
 }
