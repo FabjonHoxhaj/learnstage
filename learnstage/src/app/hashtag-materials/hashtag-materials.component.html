@@ -30,7 +30,7 @@
                 </app-star-rating>
               </ng-container>
               </div>
-              <div class="containerHam"><app-hamburger-tag (tag)="onTagging($event)"></app-hamburger-tag></div>
+              <div class="containerHam"><app-hamburger-tag (removedTag)="onRemovedTag($event)" (tag)="onTagging($event)"></app-hamburger-tag></div>
         </div>
         
     </div>

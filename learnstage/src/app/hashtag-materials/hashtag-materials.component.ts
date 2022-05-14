@@ -71,4 +71,8 @@ onTagging(buttonHide: boolean) {
 this.buttonHide = buttonHide;
 }
 
+onRemovedTag(buttonHide: boolean) {
+  this.buttonHide =buttonHide;
+}
+
 }
