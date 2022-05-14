@@ -44,6 +44,7 @@ export class HamburgerTagComponent implements OnInit {
   removeTagging() {
     let remTag = this.buttonHide =false;
     this.removedTag.emit(remTag);
+    this.buttonHide = true;
   }
 
 }
