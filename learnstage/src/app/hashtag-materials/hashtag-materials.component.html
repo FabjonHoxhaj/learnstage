@@ -24,24 +24,10 @@
                 <button class="buttonStyle" *ngIf="buttonHide==true">&check; markiert</button>
             </div>
             <div>
-              <ng-container>
-                  <span>
-                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [starId]="starOne" [rating]="hoverState || rating">
-                    </app-star-rating>
-                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [starId]="starTwo" [rating]="hoverState || rating">
-                    </app-star-rating>
-                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [starId]="starThree" [rating]="hoverState || rating">
-                    </app-star-rating>
-                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [starId]="starFour" [rating]="hoverState || rating">
-                    </app-star-rating>
-                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                       (starClicked)="onStarClicked($event)" [starId]="starFive" [rating]="hoverState || rating">
-                    </app-star-rating>
-                </span>
+              <ng-container *ngFor="let star of stars;">
+                <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating">
+                </app-star-rating>
               </ng-container>
               </div>
               <div class="containerHam"><app-hamburger-tag (tag)="onTagging($event)"></app-hamburger-tag></div>
