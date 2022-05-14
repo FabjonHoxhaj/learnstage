@@ -17,6 +17,7 @@ export class HashtagMaterialsComponent implements OnInit {
   stars = [1, 2, 3, 4, 5];
   rating = 0;
   hoverState = 0;
+  buttonHide: boolean = false;
 
 
   constructor(private uploadService: FileUploadService) { }
@@ -50,17 +51,24 @@ export class HashtagMaterialsComponent implements OnInit {
 
 onStarEnter(starId: any) {
   this.hoverState = starId;
-  console.log(this. hoverState);
 }
 
 onStarLeave() {
   this.hoverState = 0;
-  console.log(this.hoverState);
 }
 
 onStarClicked(starId: any) {
   this.rating =starId;
   console.log(this.rating);
+}
+
+getIndex() {
+  let index = document.getElementsByTagName("span");
+  console.log(index);
+}
+
+onTagging(buttonHide: boolean) {
+this.buttonHide = buttonHide;
 }
 
 }

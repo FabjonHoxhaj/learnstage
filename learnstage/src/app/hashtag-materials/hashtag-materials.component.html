@@ -20,14 +20,18 @@
     <div class="containerUploads" *ngFor="let file of fileUploads">
         <div class="fileIcon"><i class="material-icons">download_for_offline</i></div>
         <div class="fileName">
-            <div>{{file.name}}</div>
+            <div>{{file.name}}
+                <button class="buttonStyle" *ngIf="buttonHide==true">&check; markiert</button>
+            </div>
             <div>
               <ng-container *ngFor="let star of stars;">
-                    <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
-                    (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating">
-                    </app-star-rating>
+                <app-star-rating (starEnter)="onStarEnter($event)" (starLeave)="onStarLeave()" 
+                (starClicked)="onStarClicked($event)" [starId]="star" [rating]="hoverState || rating">
+                </app-star-rating>
               </ng-container>
               </div>
+              <div class="containerHam"><app-hamburger-tag (tag)="onTagging($event)"></app-hamburger-tag></div>
         </div>
+        
     </div>
 </body>

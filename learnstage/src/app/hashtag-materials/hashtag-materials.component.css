@@ -3,6 +3,12 @@
     justify-content: center;
 }
 
+.containerHam {
+    display: relative;
+    margin-left: 700px;
+    padding-bottom: 20px;
+}
+
 .containerInput {
     background-color: #e4d5c5;
     display: inline-flex;
@@ -48,6 +54,14 @@ label {
 
 .fileName {
     margin-top: 3px;
+}
+
+.buttonStyle {
+    border-radius: 5px;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    padding: 5px;
 }
 
 
