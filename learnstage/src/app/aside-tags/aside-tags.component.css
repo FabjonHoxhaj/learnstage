@@ -7,16 +7,16 @@
     margin-top: 60px;
 }
 
-.AußenContainer2 {
+.containerHashtags {
     display: flex;
     justify-content: center;
 }
 
-.container2 {
+.containerWrap {
     display: flex;
     justify-content: center;
-    width: 65%;
     flex-wrap: wrap;
+    width: 65%;
 }
 
 .items {
