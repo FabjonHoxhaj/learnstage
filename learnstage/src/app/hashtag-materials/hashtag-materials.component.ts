@@ -62,10 +62,6 @@ onStarClicked(starId: any) {
   console.log(this.rating);
 }
 
-getIndex() {
-  let index = document.getElementsByTagName("span");
-  console.log(index);
-}
 
 onTagging(buttonHide: boolean) {
 this.buttonHide = buttonHide;
