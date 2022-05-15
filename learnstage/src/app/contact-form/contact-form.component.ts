@@ -17,18 +17,11 @@ export class ContactFormComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     console.log(form.value);
-    form.resetForm();
-  }
-
-  create() {
-    /*let input = (<HTMLInputElement>document.getElementById("inputValue")).value;
-
-    this.http.sendDataForm(input).subscribe(
+    this.http.sendDataForm(form.value).subscribe(
       data => console.log(data),
       error => console.error(error));
-
-  }*/
-
-}
+      form.resetForm();
+  }
 
 }
+

@@ -18,7 +18,7 @@ export class HttpService {
 
     sendDataForm(myForm: any) {
         const body = JSON.stringify(myForm);
-        const headers = new HttpHeaders({ "Content-Type": "application/json" }); //hiermit weiß die DB welche Art von Daten ich schicke
+        const headers = new HttpHeaders({ "Content-Type": "application/json" });
         return this.http.post("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/FormData.json", body, { headers: headers });
     }
 
