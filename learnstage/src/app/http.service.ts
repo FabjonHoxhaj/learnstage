@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 export class HttpService {
     constructor(private http: HttpClient) { }
 
-    sendData(hashtag: any) {
+    sendDataHashtags(hashtag: any) {
         const body = JSON.stringify(hashtag);
         const headers = new HttpHeaders({ "Content-Type": "application/json" }); //hiermit weiß die DB welche Art von Daten ich schicke
         return this.http.post("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/data.json", body, { headers: headers });
@@ -14,6 +14,12 @@ export class HttpService {
     getData() {
         const DBEntries = this.http.get("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/data.json")
         return DBEntries;
+    }
+
+    sendDataForm(myForm: any) {
+        const body = JSON.stringify(myForm);
+        const headers = new HttpHeaders({ "Content-Type": "application/json" });
+        return this.http.post("https://learnstage-88b93-default-rtdb.asia-southeast1.firebasedatabase.app/FormData.json", body, { headers: headers });
     }
 
 }
