@@ -36,7 +36,7 @@ export class HashtagComponent implements OnInit {
     let input = (<HTMLInputElement>document.getElementById("inputValue")).value;
     this.arraySet.add(input);
 
-    this.http.sendData(input).subscribe(
+    this.http.sendDataHashtags(input).subscribe(
       data => console.log(data),
       error => console.error(error));
 
