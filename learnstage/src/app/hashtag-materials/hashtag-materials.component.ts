@@ -17,7 +17,7 @@ export class HashtagMaterialsComponent implements OnInit {
   stars = [1, 2, 3, 4, 5];
   rating = 0;
   hoverState = 0;
-  buttonHide: boolean = false;
+  overlayHide: boolean = false;
 
 
   constructor(private uploadService: FileUploadService) { }
@@ -64,11 +64,11 @@ onStarClicked(starId: any) {
 
 
 onTagging(buttonHide: boolean) {
-this.buttonHide = buttonHide;
+this.overlayHide = buttonHide;
 }
 
 onRemovedTag(buttonHide: boolean) {
-  this.buttonHide =buttonHide;
+  this.overlayHide =buttonHide;
 }
 
 }

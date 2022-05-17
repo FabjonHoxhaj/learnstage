@@ -56,12 +56,25 @@ label {
     margin-top: 3px;
 }
 
-.buttonStyle {
-    border-radius: 5px;
-    background-color: #3B82F6;
-    color: white;
-    border: none;
-    padding: 5px;
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dialogTag {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    color: black;
+    box-shadow: 8px 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 
