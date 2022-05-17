@@ -23,6 +23,8 @@ import { environment } from 'src/environments/environment';
 import { StarDirective } from './star.directive';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { HamburgerTagComponent } from './hamburger-tag/hamburger-tag.component';
+import { TagStudentsComponent } from './tag-students/tag-students.component';
+import { MyTagsComponent } from './my-tags/my-tags.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { HamburgerTagComponent } from './hamburger-tag/hamburger-tag.component';
     HashtagMaterialsComponent,
     StarDirective,
     StarRatingComponent,
-    HamburgerTagComponent
+    HamburgerTagComponent,
+    TagStudentsComponent,
+    MyTagsComponent
   ],
   imports: [
     BrowserModule,
