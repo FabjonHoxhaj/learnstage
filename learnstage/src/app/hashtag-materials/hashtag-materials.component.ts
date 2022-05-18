@@ -67,8 +67,8 @@ onTagging(buttonHide: boolean) {
 this.overlayHide = buttonHide;
 }
 
-onRemovedTag(buttonHide: boolean) {
-  this.overlayHide =buttonHide;
+closeModal() {
+    this.overlayHide = false;
 }
 
 }

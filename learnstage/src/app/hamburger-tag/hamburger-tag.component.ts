@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hamburger-tag',
@@ -8,7 +8,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HamburgerTagComponent implements OnInit {
 
   @Output() tag: EventEmitter<boolean> = new EventEmitter();
-  @Output() removedTag: EventEmitter<boolean> = new EventEmitter();
   menuHidden: boolean = true;
   hamburgerHide: boolean = true;
   closeHidden: boolean = false;
@@ -39,12 +38,11 @@ export class HamburgerTagComponent implements OnInit {
 
   tagging() {
     this.tag.emit(this.buttonHide);
+    this.menuHidden = true;
+    this.hamburgerHide = true;
+    this.closeHidden = false;
+  
   }
 
-  removeTagging() {
-    let remTag = this.buttonHide =false;
-    this.removedTag.emit(remTag);
-    this.buttonHide = true;
-  }
 
 }
