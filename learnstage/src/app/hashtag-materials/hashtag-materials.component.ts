@@ -71,4 +71,8 @@ closeModal() {
     this.overlayHide = false;
 }
 
+createTag() {
+  console.log("Test");
+}
+
 }

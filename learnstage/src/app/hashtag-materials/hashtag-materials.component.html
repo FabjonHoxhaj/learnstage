@@ -22,9 +22,10 @@
                <div *ngIf="overlayHide==true">
                  <div class="overlay"></div>
                  <div class="dialogTag">
+                     <div class="headlineCont"><h2>Dein Tag</h2></div>
                     <span class="close" (click)="closeModal()">&times;</span>
-                    <input id="inputValue" type="text" placeholder="YourTag"><br>
-                    <div class="btnCon"><button class="btnModal">Erstellen</button></div>
+                    <input id="inputValue" type="text"><br>
+                    <div class="btnCon"><button (click)="createTag()" class="btnModal">Erstellen</button></div>
                 </div>
                </div>
 

@@ -114,3 +114,12 @@ button {
     cursor: pointer;
 }
 
+h2 {
+    color: #002b44;
+}
+
+.headlineCont {
+    display: flex;
+    justify-content: center;
+}
+
